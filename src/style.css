@@ -44,15 +44,17 @@ nav {
 }
 
 #scrollbox .content {
+  /* capire come renderlo responsive al contenuto di ogni sezione*/
   height: 100vh;
   width: 100vw;
   display: grid;
   place-items: center;
-  flex-shrink: 0;
+  flex-shrink: 0; /*<- come farlo adattare al contenuto?*/
   text-align: center; /*to remove later*/
   font-size: 32px; /*to remove later*/
   font-weight: bold; /*to remove later*/
   text-transform: uppercase; /*to remove later*/
+  gap: 120px;
 }
 
 #scrollbox {
