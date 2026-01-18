@@ -86,8 +86,8 @@ nav {
 /** spark animation **/
 .spark {
   position: absolute;
-  width: 10px;
-  height: 4px;
+  width: 15px;
+  height: 6px;
   background: #ffffff;
   mix-blend-mode: difference;
   pointer-events: none;
