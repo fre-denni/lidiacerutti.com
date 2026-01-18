@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: rgb(22, 21, 21); /*to change in darkmode*/
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: rgba(0, 0, 0, 0.7); /*to change in darkmode*/
+  background-color: rgba(0, 0, 0, 0.5); /*to change in darkmode*/
+  backdrop-filter: blur(5px);
+  padding: 10px 40px;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+header a {
+  text-decoration: none;
+  color: white; /*to change in darkmode*/
+  cursor: pointer;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+#scrollbox .content {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  text-align: center; /*to remove later*/
+  font-size: 32px; /*to remove later*/
+  font-weight: bold; /*to remove later*/
+  text-transform: uppercase; /*to remove later*/
+}
+
+#scrollbox {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* to remove later */
+
+#home {
+  background-color: #efefef;
+}
+
+#about {
+  background-color: #fb6c6c;
+}
+
+#works {
+  background-color: #4fe191;
+}
+
+#footer {
+  background-color: #aca3ff;
+}
