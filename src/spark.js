@@ -35,7 +35,6 @@ const SparkManager = class {
   }
 
   handleClick(t) {
-    console.log("clicked!");
     this.isAnimating = true;
     setTimeout(() => (this.isAnimating = false), this.cooldownTime);
 
