@@ -20,7 +20,7 @@ const SparkManager = class {
     };
 
     setup();
-  }
+  } //SparkManager object
 
   createAnimation(name, angle) {
     const i = `translate(-50%, -50%) rotate(${angle}deg) translate(8px, 0px)`;
@@ -32,7 +32,7 @@ const SparkManager = class {
       rule,
       this.styleSheet.sheet.cssRules.length,
     );
-  }
+  } //create animation object
 
   handleClick(t) {
     this.isAnimating = true;
@@ -56,6 +56,6 @@ const SparkManager = class {
       setTimeout(() => spark.remove(), 800);
     }
   }
-};
+}; //handleClick
 
-new SparkManager();
+new SparkManager(); //create SparkManager object
