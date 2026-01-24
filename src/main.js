@@ -56,10 +56,14 @@ let horizontalTween = gsap.to(contents, {
   xPercent: -100 * (contents.length - 1),
   ease: "none",
   scrollTrigger: {
+    //add snap to section
     trigger: container,
+    start: "left left",
     pin: true,
     scrub: true,
     markers: true,
+    snap: 1 / (contents.length - 1), //may remove later
+    end: "+=3500", //can become: "+=" + contentContents * contents.lenght + "%"
   },
 }); //define main horizontal animation
 
