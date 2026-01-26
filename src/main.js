@@ -44,6 +44,7 @@ function getScrollLookup(
 //--- Control the main horizontal scrolling
 let container = document.querySelector("#scrollbox");
 let contents = container.querySelectorAll(".content");
+let contentPos = contents.map((c) => c.offsetTop);
 
 let smoother = ScrollSmoother.create({
   content: "#smooth-content",
@@ -59,11 +60,24 @@ let horizontalTween = gsap.to(contents, {
     //add snap to section
     trigger: container,
     start: "left left",
+    end: "+=" + 100 * contents.length + "%", //to rework
     pin: true,
     scrub: true,
     markers: true,
-    snap: 1 / (contents.length - 1), //may remove later
-    end: "+=3500", //can become: "+=" + contentContents * contents.lenght + "%"
+    snap: {
+      snapTo: (progress, self) => {
+        const scroll = self.scroll();
+        const direction = self.getVelocity() > 0 ? 1 : -1; // 1 = down, -1 up
+        let target;
+
+        if (direction < 0) {
+          //Scrolling up: snap to current section start
+          target = contentPos.findLast((pos) => scroll >= pos) || 0;
+        } else {
+          //scrolling down: snap if past 95% of current section
+        }
+      },
+    }, //1 / (contents.length - 1), //may remove later
   },
 }); //define main horizontal animation
 
