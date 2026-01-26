@@ -77,7 +77,7 @@ let horizontalTween = gsap.to(contents, {
           //scrolling down: snap if past 95% of current section
         }
       },
-    }, //1 / (contents.length - 1), //may remove later
+    }, //1 (contents.length - 1), //may remove later
   },
 }); //define main horizontal animation
 
